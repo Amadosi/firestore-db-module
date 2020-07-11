@@ -1,0 +1,28 @@
+{
+  "name": "fs-db-connector",
+  "version": "1.0.0",
+  "description": "fs-db-connector is a promise-based Node.js ORM Extension for performing simple firestore operations",
+  "main": "lib/index.js",
+  "scripts": {
+    "build" : "tsc",
+    "prepare" : "npm run build",
+    "test": "jest --config jestconfig.json"
+  },
+  "keywords": [
+    "firestore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amadosi/firestore-db-module.git"
+  },
+  "author": "Amadosi Odaibo",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "4.1.1",
+    "memory-cache": "0.2.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5",
+    "typescript": "3.9.6"
+  }
+}

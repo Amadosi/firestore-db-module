@@ -1,0 +1,8 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+lib
+tsconfig.json
+package.json
+.prettierrc.json
