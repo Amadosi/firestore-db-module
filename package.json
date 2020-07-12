@@ -1,11 +1,11 @@
 {
   "name": "fs-db-connector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fs-db-connector is a promise-based Node.js ORM Extension for performing simple firestore operations",
   "main": "lib/index.js",
   "scripts": {
-    "build" : "tsc",
-    "prepare" : "npm run build",
+    "build": "tsc",
+    "prepare": "npm run build",
     "test": "jest --config jestconfig.json"
   },
   "keywords": [

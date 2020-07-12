@@ -180,7 +180,7 @@ export default class DatabaseModule {
     documents.forEach((doc: DataObject<T>) => data.push(<T>doc.data()));
 
     //save to cache
-    this.addToCache(cacheQuery, JSON.stringify(data));
+    await this.addToCache(cacheQuery, JSON.stringify(data));
 
     return data;
   }
@@ -233,8 +233,19 @@ export default class DatabaseModule {
   }
 
   async addToCache(key: string, value: string) {
-    //check the current size if the cache
-    const size = cache.size();
+    //get the cache size in bytes
+    const size = Buffer.byteLength(cache.exportJson());
+
+    //convert the memory allocated size to bytes
+    const maxBytes = this.cache_allocated_memory / 0.000001;
+
+
+    console.log(size, maxBytes);
+
+    if (maxBytes < size) {
+      //clear the cache
+      cache.clear();
+    }
 
     //save to the cache as string using the collection:id query
     cache.put(key, value, this.cache_max_age);
