@@ -18,7 +18,7 @@
   "author": "Amadosi Odaibo",
   "license": "ISC",
   "dependencies": {
-    "@google-cloud/firestore": "4.1.1",
+    "@google-cloud/firestore": "6.2.0",
     "memory-cache": "0.2.0"
   },
   "devDependencies": {
